@@ -8,11 +8,11 @@ public enum SidekiqPushError: Error {
 public struct SidekiqPushClient {
     let redisClient: RedisClient
 
-    init(_ redisHost: String, _ redisPort: Int32) {
+    public init(_ redisHost: String, _ redisPort: Int32) {
         self.redisClient = RedisClient(redisHost, redisPort)
     }
 
-    init() {
+    public init() {
         self.redisClient = RedisClient()
     }
 
